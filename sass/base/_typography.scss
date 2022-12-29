@@ -6,6 +6,7 @@ body {
   /* font-size: 16px; */
   line-height: 30px;
   color: a.$secondary-medium-blue;
+  overflow-x: hidden;
 }
 
 .header {
@@ -15,11 +16,19 @@ body {
       font-weight: 300;
 
       line-height: 80px;
+
+      @include a.respond(tab-port) {
+        font-size: 4.8rem;
+        line-height: 64px;
+        letter-spacing: -0.6px;
+        width: auto;
+      }
     }
 
     &-text {
       font-weight: 400;
       font-size: 2rem;
+      line-height: 3rem;
     }
   }
 }
@@ -42,10 +51,12 @@ body {
       line-height: 48px;
       font-weight: 700;
       letter-spacing: -0.5px;
+      color: a.$secondary-medium-blue;
     }
     &-text {
       font-size: 2rem;
       line-height: 3rem;
+      color: a.$secondary-medium-blue;
     }
   }
 }

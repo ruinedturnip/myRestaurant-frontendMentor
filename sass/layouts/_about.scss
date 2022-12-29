@@ -4,27 +4,59 @@
   background-image: url(/images/patterns/pattern-curve-top-right.svg);
   background-position-y: 26.2rem;
   background-repeat: no-repeat;
+  position: relative;
+
+  &::after {
+    content: url(/images/patterns/pattern-curve-top-left.svg);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    @include a.respond(tab-port) {
+      content: "";
+    }
+  }
+
+  @include a.respond(tab-land) {
+    background-position-x: -400px;
+  }
 
   &__first {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include a.respond(tab-land) {
+      flex-direction: column;
+    }
   }
   &__second {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
     justify-content: space-between;
+
+    @include a.respond(tab-land) {
+      flex-direction: column;
+    }
   }
 
   &__image {
     &--first {
       transform: translateY(-7rem);
       margin-right: 125px;
+
+      @include a.respond(tab-land) {
+        margin-right: 0;
+      }
     }
     &--second {
       transform: translateY(7rem);
       margin-left: 125px;
+
+      @include a.respond(tab-land) {
+        margin-left: 0;
+      }
     }
 
     &-box {
@@ -36,6 +68,12 @@
         background-image: url(../../images/homepage/enjoyable-place-desktop@2x.jpg);
         height: 720px;
         width: 540px;
+
+        @include a.respond(tab-land) {
+          background-image: url(../../images/homepage/enjoyable-place-tablet@2x.jpg);
+          height: 360px;
+          width: 573px;
+        }
       }
       &--second {
         background-image: url(../../images/homepage/locally-sourced-desktop@2x.jpg);
@@ -43,11 +81,25 @@
         width: 540px;
         position: relative;
 
+        @include a.respond(tab-land) {
+          background-image: url(../../images/homepage/locally-sourced-tablet@2x.jpg);
+          height: 360px;
+          width: 573px;
+        }
+
         &::after {
           content: url(../../images/patterns/pattern-lines.svg);
           position: absolute;
           right: -90px;
           top: 40%;
+
+          @include a.respond(tab-port) {
+            top: 60%;
+          }
+
+          @include a.respond(tab-small) {
+            left: -30px;
+          }
         }
       }
     }
@@ -57,12 +109,27 @@
     max-width: 44.5rem;
 
     transform: translateY(-4rem);
+
+    @include a.respond(tab-land) {
+      transform: none;
+      max-width: 45.7rem;
+
+      text-align: center;
+    }
+
     &--first {
       svg {
         margin-bottom: 55px;
+        @include a.respond(tab-land) {
+          margin-bottom: 39px;
+        }
       }
     }
     &--second {
+      @include a.respond(tab-land) {
+        margin-top: 150px;
+        margin-bottom: 150px;
+      }
       svg {
         margin-bottom: 55px;
       }

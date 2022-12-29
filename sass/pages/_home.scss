@@ -4,12 +4,20 @@
   &__container {
     max-width: 110rem;
     margin: 0 auto;
+
+    @include a.respond(tab-port) {
+      max-width: 573px;
+    }
   }
 }
 
 .highlights {
   height: 761px;
   background-color: a.$primary-black;
+
+  @include a.respond(tab-land) {
+    height: 891px;
+  }
 
   &__container {
     max-width: 110rem;
@@ -18,6 +26,13 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+
+    @include a.respond(tab-land) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 150px 0;
+    }
   }
 }
 
@@ -27,5 +42,11 @@
     margin: 0 auto;
 
     padding: 200px 0;
+
+    @include a.respond(tab-land) {
+      max-width: 683px;
+
+      padding: 100px;
+    }
   }
 }

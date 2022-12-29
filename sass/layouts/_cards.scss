@@ -5,4 +5,8 @@
   background-position-y: 0rem;
   background-position-x: -30rem;
   background-repeat: no-repeat;
+
+  @include a.respond(tab-land) {
+    background-position-x: -45rem;
+  }
 }

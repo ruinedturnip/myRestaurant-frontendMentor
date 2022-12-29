@@ -18,6 +18,10 @@
       background-color: #fff;
       color: a.$primary-black;
     }
+
+    @include a.respond(tab-land) {
+      align-self: center;
+    }
   }
 
   &--transparent {

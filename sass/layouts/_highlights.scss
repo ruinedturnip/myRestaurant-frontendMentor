@@ -4,6 +4,12 @@
   &__content {
     max-width: 44.5rem;
 
+    @include a.respond(tab-land) {
+      text-align: center;
+      max-width: 57.3rem;
+      margin-bottom: 54px;
+    }
+
     &-header {
       margin-bottom: 27px;
       position: relative;
@@ -13,6 +19,19 @@
         position: absolute;
         left: 0;
         top: -100px;
+
+        @include a.respond(tab-land) {
+          top: -75px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+    }
+
+    &-text {
+      @include a.respond(tab-land) {
+        margin: 0 auto;
+        max-width: 44.5rem;
       }
     }
 
@@ -21,6 +40,10 @@
       height: 38.6rem;
       display: flex;
       flex-direction: column;
+
+      @include a.respond(tab-land) {
+        width: 57.3rem;
+      }
     }
   }
 
@@ -51,6 +74,9 @@
 
     &-textbox {
       max-width: 350px;
+      @include a.respond(tab-land) {
+        max-width: 383px;
+      }
     }
 
     &--heading {

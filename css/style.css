@@ -14,6 +14,7 @@ body {
   /* font-size: 16px; */
   line-height: 30px;
   color: #242b37;
+  overflow-x: hidden;
 }
 
 .header__textbox-title {
@@ -21,9 +22,18 @@ body {
   font-weight: 300;
   line-height: 80px;
 }
+@media only screen and (max-width: 56.25em) {
+  .header__textbox-title {
+    font-size: 4.8rem;
+    line-height: 64px;
+    letter-spacing: -0.6px;
+    width: auto;
+  }
+}
 .header__textbox-text {
   font-weight: 400;
   font-size: 2rem;
+  line-height: 3rem;
 }
 
 .button {
@@ -41,10 +51,12 @@ body {
   line-height: 48px;
   font-weight: 700;
   letter-spacing: -0.5px;
+  color: #242b37;
 }
 .about__content-text {
   font-size: 2rem;
   line-height: 3rem;
+  color: #242b37;
 }
 
 .highlights {
@@ -168,6 +180,11 @@ body {
 .container {
   padding: 0 165px;
 }
+@media only screen and (max-width: 56.25em) {
+  .container {
+    padding: 0 33px;
+  }
+}
 
 .header {
   height: 820px;
@@ -175,32 +192,91 @@ body {
   background-size: cover;
   color: white;
 }
+@media only screen and (max-width: 56.25em) {
+  .header {
+    height: 992px;
+    background-image: linear-gradient(to bottom, transparent 40%, #111 40%), url(../../images/homepage/hero-bg-tablet@2x.jpg);
+    background-position-x: 0;
+    background-position-y: 0;
+  }
+}
 .header__logo {
   padding-top: 65px;
   margin-bottom: 153px;
+}
+@media only screen and (max-width: 56.25em) {
+  .header__logo {
+    margin: 0 auto;
+    margin-bottom: 38px;
+    padding-top: 374px;
+    display: flex;
+    align-self: center;
+  }
 }
 .header__textbox {
   display: flex;
   flex-direction: column;
 }
+@media only screen and (max-width: 56.25em) {
+  .header__textbox {
+    text-align: center;
+    align-self: center;
+    align-items: center;
+  }
+}
 .header__textbox-title {
   margin-bottom: 10px;
   width: 508px;
 }
+@media only screen and (max-width: 56.25em) {
+  .header__textbox-title {
+    margin: 0 auto;
+    margin-bottom: 20px;
+    align-self: center;
+  }
+}
 .header__textbox-text {
   width: 445px;
   margin-bottom: 40px;
+}
+@media only screen and (max-width: 56.25em) {
+  .header__textbox-text {
+    width: 573px;
+    margin-bottom: 52px;
+  }
 }
 
 .about {
   background-image: url(/images/patterns/pattern-curve-top-right.svg);
   background-position-y: 26.2rem;
   background-repeat: no-repeat;
+  position: relative;
+}
+.about::after {
+  content: url(/images/patterns/pattern-curve-top-left.svg);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+@media only screen and (max-width: 56.25em) {
+  .about::after {
+    content: "";
+  }
+}
+@media only screen and (max-width: 75em) {
+  .about {
+    background-position-x: -400px;
+  }
 }
 .about__first {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+@media only screen and (max-width: 75em) {
+  .about__first {
+    flex-direction: column;
+  }
 }
 .about__second {
   display: flex;
@@ -208,13 +284,28 @@ body {
   align-items: center;
   justify-content: space-between;
 }
+@media only screen and (max-width: 75em) {
+  .about__second {
+    flex-direction: column;
+  }
+}
 .about__image--first {
   transform: translateY(-7rem);
   margin-right: 125px;
 }
+@media only screen and (max-width: 75em) {
+  .about__image--first {
+    margin-right: 0;
+  }
+}
 .about__image--second {
   transform: translateY(7rem);
   margin-left: 125px;
+}
+@media only screen and (max-width: 75em) {
+  .about__image--second {
+    margin-left: 0;
+  }
 }
 .about__image-box {
   width: 100%;
@@ -226,11 +317,25 @@ body {
   height: 720px;
   width: 540px;
 }
+@media only screen and (max-width: 75em) {
+  .about__image-box--first {
+    background-image: url(../../images/homepage/enjoyable-place-tablet@2x.jpg);
+    height: 360px;
+    width: 573px;
+  }
+}
 .about__image-box--second {
   background-image: url(../../images/homepage/locally-sourced-desktop@2x.jpg);
   height: 720px;
   width: 540px;
   position: relative;
+}
+@media only screen and (max-width: 75em) {
+  .about__image-box--second {
+    background-image: url(../../images/homepage/locally-sourced-tablet@2x.jpg);
+    height: 360px;
+    width: 573px;
+  }
 }
 .about__image-box--second::after {
   content: url(../../images/patterns/pattern-lines.svg);
@@ -238,12 +343,40 @@ body {
   right: -90px;
   top: 40%;
 }
+@media only screen and (max-width: 56.25em) {
+  .about__image-box--second::after {
+    top: 60%;
+  }
+}
+@media only screen and (max-width: 46.56em) {
+  .about__image-box--second::after {
+    left: -30px;
+  }
+}
 .about__content {
   max-width: 44.5rem;
   transform: translateY(-4rem);
 }
+@media only screen and (max-width: 75em) {
+  .about__content {
+    transform: none;
+    max-width: 45.7rem;
+    text-align: center;
+  }
+}
 .about__content--first svg {
   margin-bottom: 55px;
+}
+@media only screen and (max-width: 75em) {
+  .about__content--first svg {
+    margin-bottom: 39px;
+  }
+}
+@media only screen and (max-width: 75em) {
+  .about__content--second {
+    margin-top: 150px;
+    margin-bottom: 150px;
+  }
 }
 .about__content--second svg {
   margin-bottom: 55px;
@@ -255,6 +388,13 @@ body {
 .highlights__content {
   max-width: 44.5rem;
 }
+@media only screen and (max-width: 75em) {
+  .highlights__content {
+    text-align: center;
+    max-width: 57.3rem;
+    margin-bottom: 54px;
+  }
+}
 .highlights__content-header {
   margin-bottom: 27px;
   position: relative;
@@ -265,11 +405,29 @@ body {
   left: 0;
   top: -100px;
 }
+@media only screen and (max-width: 75em) {
+  .highlights__content-header::before {
+    top: -75px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+@media only screen and (max-width: 75em) {
+  .highlights__content-text {
+    margin: 0 auto;
+    max-width: 44.5rem;
+  }
+}
 .highlights__content--right {
   width: 54rem;
   height: 38.6rem;
   display: flex;
   flex-direction: column;
+}
+@media only screen and (max-width: 75em) {
+  .highlights__content--right {
+    width: 57.3rem;
+  }
 }
 .highlights__item {
   display: flex;
@@ -298,6 +456,11 @@ body {
 .highlights__item-textbox {
   max-width: 350px;
 }
+@media only screen and (max-width: 75em) {
+  .highlights__item-textbox {
+    max-width: 383px;
+  }
+}
 .highlights__item--heading {
   margin-bottom: 6px;
 }
@@ -307,6 +470,11 @@ body {
   background-position-y: 0rem;
   background-position-x: -30rem;
   background-repeat: no-repeat;
+}
+@media only screen and (max-width: 75em) {
+  .cards {
+    background-position-x: -45rem;
+  }
 }
 
 .booking {
@@ -319,10 +487,21 @@ body {
 .booking__container {
   max-width: 110rem;
   margin: 0 auto;
-  padding: 100px 0 0 0;
+  padding: 50px 0 0 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+@media only screen and (max-width: 75em) {
+  .booking__container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 0 0 0;
+  }
+}
+.booking__heading {
+  margin-bottom: 24px;
 }
 
 .footer {
@@ -335,11 +514,22 @@ body {
   align-items: flex-start;
   padding: 7rem 0 0 16.5rem;
 }
+@media only screen and (max-width: 56.25em) {
+  .footer__container {
+    padding: 7rem 0 0 3.9rem;
+  }
+}
 .footer--middle {
   display: flex;
   flex-direction: column;
   margin-right: 124px;
   margin-left: 193px;
+}
+@media only screen and (max-width: 56.25em) {
+  .footer--middle {
+    margin-right: 50px;
+    margin-left: 50px;
+  }
 }
 
 .logo__link {
@@ -363,6 +553,11 @@ body {
 .button--light:hover {
   background-color: #fff;
   color: #111;
+}
+@media only screen and (max-width: 75em) {
+  .button--light {
+    align-self: center;
+  }
 }
 .button--transparent {
   background-color: transparent;
@@ -397,6 +592,11 @@ body {
   align-items: center;
   position: relative;
 }
+@media only screen and (max-width: 75em) {
+  .card {
+    flex-direction: column;
+  }
+}
 .card__picture {
   transition: all 1s;
 }
@@ -409,9 +609,31 @@ body {
 .card--right {
   margin-left: 115px;
 }
+@media only screen and (max-width: 75em) {
+  .card--right {
+    order: 2;
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 75em) {
+  .card__button {
+    order: 3;
+  }
+}
 .card--textbox {
   max-width: 44.5rem;
   margin-bottom: 60px;
+}
+@media only screen and (max-width: 75em) {
+  .card--textbox {
+    order: 2;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 60px;
+    max-width: 485px;
+  }
 }
 .card__heading {
   margin-bottom: 19px;
@@ -419,6 +641,22 @@ body {
 .card__list {
   margin-top: 79px;
   list-style: none;
+}
+@media only screen and (max-width: 75em) {
+  .card__list {
+    order: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 689px;
+    margin-top: 57px;
+    margin-bottom: 47px;
+  }
+}
+@media only screen and (max-width: 46.56em) {
+  .card__list {
+    max-width: 600px;
+  }
 }
 .card__list-item:not(:last-child) {
   margin-bottom: 12px;
@@ -436,8 +674,16 @@ body {
   height: 1px;
   background-color: #937f66;
   position: absolute;
-  top: 50%;
+  bottom: 50%;
   transform: translate(-12.5rem, -0.2rem);
+}
+@media only screen and (max-width: 75em) {
+  .card__list-item.active .card__list-item-line {
+    width: 48px;
+    bottom: -7px;
+    left: 50%;
+    transform: translatex(-50%);
+  }
 }
 
 .hide {
@@ -628,10 +874,20 @@ body {
   max-width: 110rem;
   margin: 0 auto;
 }
+@media only screen and (max-width: 56.25em) {
+  .about__container {
+    max-width: 573px;
+  }
+}
 
 .highlights {
   height: 761px;
   background-color: #111;
+}
+@media only screen and (max-width: 75em) {
+  .highlights {
+    height: 891px;
+  }
 }
 .highlights__container {
   max-width: 110rem;
@@ -641,11 +897,25 @@ body {
   justify-content: space-between;
   align-items: flex-start;
 }
+@media only screen and (max-width: 75em) {
+  .highlights__container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 150px 0;
+  }
+}
 
 .cards__container {
   max-width: 110rem;
   margin: 0 auto;
   padding: 200px 0;
+}
+@media only screen and (max-width: 75em) {
+  .cards__container {
+    max-width: 683px;
+    padding: 100px;
+  }
 }
 
 .booking__header {

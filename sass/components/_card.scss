@@ -5,6 +5,10 @@
   align-items: center;
   position: relative;
 
+  @include a.respond(tab-land) {
+    flex-direction: column;
+  }
+
   &__picture {
     transition: all 1s;
   }
@@ -18,11 +22,32 @@
 
   &--right {
     margin-left: 115px;
+    @include a.respond(tab-land) {
+      order: 2;
+      margin-left: 0;
+
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__button {
+    @include a.respond(tab-land) {
+      order: 3;
+    }
   }
 
   &--textbox {
     max-width: 44.5rem;
     margin-bottom: 60px;
+
+    @include a.respond(tab-land) {
+      order: 2;
+      text-align: center;
+      margin: 0 auto;
+      margin-bottom: 60px;
+      max-width: 485px;
+    }
   }
 
   &__heading {
@@ -32,6 +57,20 @@
   &__list {
     margin-top: 79px;
     list-style: none;
+
+    @include a.respond(tab-land) {
+      order: 1;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 689px;
+      margin-top: 57px;
+      margin-bottom: 47px;
+    }
+
+    @include a.respond(tab-small) {
+      max-width: 600px;
+    }
 
     &-item:not(:last-child) {
       margin-bottom: 12px;
@@ -51,8 +90,15 @@
         height: 1px;
         background-color: a.$primary-brown;
         position: absolute;
-        top: 50%;
+        bottom: 50%;
         transform: translate(-12.5rem, -0.2rem);
+
+        @include a.respond(tab-land) {
+          width: 48px;
+          bottom: -7px;
+          left: 50%;
+          transform: translatex(-50%);
+        }
       }
     }
   }

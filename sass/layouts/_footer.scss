@@ -9,6 +9,10 @@
     display: flex;
     align-items: flex-start;
     padding: 7rem 0 0 16.5rem;
+
+    @include a.respond(tab-port) {
+      padding: 7rem 0 0 3.9rem;
+    }
   }
 
   &--middle {
@@ -16,6 +20,11 @@
     flex-direction: column;
     margin-right: 124px;
     margin-left: 193px;
+
+    @include a.respond(tab-port) {
+      margin-right: 50px;
+      margin-left: 50px;
+    }
   }
 }
 
