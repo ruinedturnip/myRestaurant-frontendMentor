@@ -23,12 +23,22 @@ body {
         letter-spacing: -0.6px;
         width: auto;
       }
+
+      @include a.respond(phone) {
+        font-size: 3.2rem;
+        line-height: 4rem;
+      }
     }
 
     &-text {
       font-weight: 400;
       font-size: 2rem;
       line-height: 3rem;
+
+      @include a.respond(phone) {
+        font-size: 1.6rem;
+        line-height: 2.6rem;
+      }
     }
   }
 }
@@ -52,11 +62,21 @@ body {
       font-weight: 700;
       letter-spacing: -0.5px;
       color: a.$secondary-medium-blue;
+
+      @include a.respond(phone) {
+        font-size: 3.2rem;
+        line-height: 4rem;
+      }
     }
     &-text {
       font-size: 2rem;
       line-height: 3rem;
       color: a.$secondary-medium-blue;
+
+      @include a.respond(phone) {
+        font-size: 1.6rem;
+        line-height: 2.6rem;
+      }
     }
   }
 }
@@ -69,10 +89,20 @@ body {
       line-height: 48px;
       font-weight: 700;
       letter-spacing: 1.5px;
+
+      @include a.respond(phone) {
+        font-size: 3.2rem;
+        line-height: 4rem;
+        letter-spacing: -0.4px;
+      }
     }
     &-text {
       font-size: 2rem;
       line-height: 3rem;
+      @include a.respond(phone) {
+        font-size: 1.6rem;
+        line-height: 2.6rem;
+      }
     }
   }
 
@@ -81,11 +111,18 @@ body {
       font-size: 2rem;
       line-height: 24px;
       letter-spacing: -0.5px;
+
+      @include a.respond(phone) {
+        text-align: center;
+      }
     }
 
     &--text {
       font-size: 1.8rem;
       line-height: 26px;
+      @include a.respond(phone) {
+        text-align: center;
+      }
     }
   }
 }
@@ -95,11 +132,21 @@ body {
     font-size: 4.8rem;
     letter-spacing: -0.5px;
     font-weight: 700px;
+
+    @include a.respond(phone) {
+      font-size: 3.2rem;
+      line-height: 40px;
+    }
   }
 
   &__text {
     font-size: 2rem;
     line-height: 30px;
+
+    @include a.respond(phone) {
+      line-height: 2.6rem;
+      font-size: 1.6rem;
+    }
   }
 
   &__listtext {
@@ -125,6 +172,12 @@ body {
     font-size: 4.8rem;
     font-weight: 700;
     color: #fff;
+
+    @include a.respond(phone) {
+      font-size: 3.2rem;
+      line-height: 4rem;
+      text-align: center;
+    }
   }
 }
 
@@ -133,6 +186,7 @@ body {
   font-size: 1.4rem;
   letter-spacing: 2px;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .booking__header {
@@ -141,11 +195,16 @@ body {
       font-size: 8rem;
       font-weight: 300;
       letter-spacing: -1px;
+
+      @include a.respond(tab-port) {
+        font-size: 4.8rem;
+      }
     }
     &-text {
       font-size: 2rem;
       line-height: 3rem;
       font-weight: 400;
+      font-weight: 300;
     }
   }
 }

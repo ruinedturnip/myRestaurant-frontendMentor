@@ -8,6 +8,10 @@
   background-size: cover;
   background-position: center;
 
+  @include a.respond(phone) {
+    height: 328px;
+  }
+
   &__container {
     max-width: 110rem;
     margin: 0 auto;
@@ -22,9 +26,17 @@
       align-items: center;
       padding: 70px 0 0 0;
     }
+
+    @include a.respond(phone) {
+      max-width: 32.7rem;
+    }
   }
 
   &__heading {
     margin-bottom: 24px;
+
+    @include a.respond(phone) {
+      margin-bottom: 20px;
+    }
   }
 }

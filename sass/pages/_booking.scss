@@ -14,23 +14,42 @@
   &__content {
     display: flex;
     align-items: flex-start;
+
+    @include a.respond(tab-land) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__textbox {
     display: flex;
     flex-direction: column;
 
+    @include a.respond(tab-land) {
+      text-align: center;
+      align-items: center;
+    }
+
     &-title {
-      margin-bottom: 2rem;
+      margin-bottom: 4rem;
       max-width: 508px;
     }
     &-text {
       max-width: 445px;
       margin-bottom: 40px;
+
+      @include a.respond(tab-land) {
+        max-width: 573px;
+      }
     }
   }
 }
 
 .section__decoration {
   height: 320px;
+  content: url("/images/patterns/pattern-curve-bottom-right.svg");
+  @include a.respond(tab-land) {
+    content: "";
+    height: 500px;
+  }
 }

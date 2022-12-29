@@ -24,6 +24,19 @@
     background-position-y: 0;
   }
 
+  @include a.respond(phone) {
+    height: 748px;
+    background-image: linear-gradient(
+        to bottom,
+        transparent 40%,
+        a.$primary-black 40%
+      ),
+      url(../../images/homepage/hero-bg-mobile@2x.jpg);
+
+    background-position-x: 0;
+    background-position-y: 0;
+  }
+
   &__logo {
     padding-top: 65px;
     margin-bottom: 153px;
@@ -35,6 +48,10 @@
 
       display: flex;
       align-self: center;
+    }
+
+    @include a.respond(phone) {
+      padding-top: 215px;
     }
   }
 
@@ -57,6 +74,10 @@
         margin-bottom: 20px;
         align-self: center;
       }
+
+      @include a.respond(phone) {
+        width: 327px;
+      }
     }
 
     &-text {
@@ -66,6 +87,10 @@
       @include a.respond(tab-port) {
         width: 573px;
         margin-bottom: 52px;
+      }
+
+      @include a.respond(phone) {
+        width: 327px;
       }
     }
   }

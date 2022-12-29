@@ -9,4 +9,8 @@
   @include a.respond(tab-land) {
     background-position-x: -45rem;
   }
+
+  @include a.respond(phone) {
+    background-image: none;
+  }
 }

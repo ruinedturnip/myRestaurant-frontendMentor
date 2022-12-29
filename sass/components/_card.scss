@@ -18,6 +18,10 @@
     position: absolute;
     top: -30px;
     left: -30px;
+
+    @include a.respond(phone-small) {
+      content: none;
+    }
   }
 
   &--right {
@@ -48,6 +52,10 @@
       margin-bottom: 60px;
       max-width: 485px;
     }
+
+    @include a.respond(phone) {
+      max-width: 327px;
+    }
   }
 
   &__heading {
@@ -70,6 +78,13 @@
 
     @include a.respond(tab-small) {
       max-width: 600px;
+    }
+
+    @include a.respond(phone) {
+      flex-direction: column;
+      margin-top: 46px;
+      max-width: 327px;
+      align-self: center;
     }
 
     &-item:not(:last-child) {
@@ -98,6 +113,10 @@
           bottom: -7px;
           left: 50%;
           transform: translatex(-50%);
+        }
+
+        @include a.respond(phone) {
+          bottom: -5px;
         }
       }
     }

@@ -20,6 +20,10 @@
     left: -50px;
     z-index: -10;
   }
+
+  @include a.respond(tab-land) {
+    margin-left: 0;
+  }
 }
 
 .screen__reader {

@@ -19,6 +19,10 @@
     height: 891px;
   }
 
+  @include a.respond(phone) {
+    height: 1720px;
+  }
+
   &__container {
     max-width: 110rem;
     margin: 0 auto;
@@ -33,6 +37,10 @@
       justify-content: center;
       padding: 150px 0;
     }
+
+    @include a.respond(phone) {
+      padding: 50px 0;
+    }
   }
 }
 
@@ -46,7 +54,11 @@
     @include a.respond(tab-land) {
       max-width: 683px;
 
-      padding: 100px;
+      padding: 100px 0;
+    }
+
+    @include a.respond(phone) {
+      padding: 50px 0;
     }
   }
 }
