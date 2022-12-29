@@ -1,3 +1,19 @@
+/* Error: expected "{".
+ *    ,
+ * 27 |       padding: 7rem 0 0 0rem;: 
+ *    |                                ^
+ *    '
+ *   sass/layouts/_footer.scss 27:32  @forward
+ *   sass/layouts/_index.scss 6:1     @use
+ *   sass/main.scss 3:1               root stylesheet */
 
-
-/*# sourceMappingURL=style.comp.css.map */
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: expected "{".\a    \2577 \a 27 \2502        padding: 7rem 0 0 0rem;: \a    \2502                                 ^\a    \2575 \a   sass/layouts/_footer.scss 27:32  @forward\a   sass/layouts/_index.scss 6:1     @use\a   sass/main.scss 3:1               root stylesheet';
+}
