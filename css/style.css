@@ -591,7 +591,7 @@ body {
 @media only screen and (max-width: 37.5em) {
   .highlights__content--right {
     width: 32.7rem;
-    margin-top: 50px;
+    margin-top: 25px;
   }
 }
 .highlights__item {
@@ -811,6 +811,11 @@ body {
   background-color: #fff;
   border: 1px solid #111;
 }
+@media only screen and (max-width: 37.5em) {
+  .form__button {
+    width: auto;
+  }
+}
 
 .card {
   display: flex;
@@ -957,9 +962,21 @@ body {
   left: -50px;
   z-index: -10;
 }
+@media only screen and (max-width: 37.5em) {
+  .booking__form::after {
+    content: none;
+  }
+}
 @media only screen and (max-width: 75em) {
   .booking__form {
     margin-left: 0;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .booking__form {
+    width: 327px;
+    height: 585px;
+    padding: 3rem;
   }
 }
 
@@ -998,6 +1015,16 @@ body {
 .input-box--small {
   width: 8rem;
 }
+@media only screen and (max-width: 37.5em) {
+  .input-box--small {
+    width: 7.3rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .input-box {
+    width: 100%;
+  }
+}
 
 .form__date,
 .form__month {
@@ -1005,6 +1032,14 @@ body {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 3.2rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .form__date,
+  .form__month {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
 }
 
 .form__select {
@@ -1024,6 +1059,12 @@ body {
   width: 28.9rem;
   display: flex;
   justify-content: space-between;
+}
+@media only screen and (max-width: 37.5em) {
+  .form__input__containers {
+    width: 100%;
+    gap: 15px;
+  }
 }
 
 .form__number-picker {
@@ -1049,7 +1090,7 @@ body {
 
 .dropdown {
   padding-left: 1.6rem;
-  padding-bottom: 1.6rem;
+  padding-bottom: 1.4rem;
   border-bottom: 1px solid #111;
   position: relative;
   cursor: pointer;
@@ -1165,7 +1206,7 @@ body {
 }
 @media only screen and (max-width: 37.5em) {
   .highlights__container {
-    padding: 50px 0;
+    padding: 100px 0;
   }
 }
 
@@ -1192,9 +1233,32 @@ body {
   background-size: cover;
   color: white;
 }
+@media only screen and (max-width: 37.5em) {
+  .booking__header {
+    background-image: url(../../images/booking/hero-bg-mobile@2x.jpg);
+    height: 600px;
+  }
+}
 .booking__header__logo {
   padding-top: 65px;
   margin-bottom: 153px;
+}
+@media only screen and (max-width: 37.5em) {
+  .booking__header__logo {
+    margin: 0 auto;
+    display: flex;
+    align-self: center;
+    margin-bottom: 44px;
+  }
+}
+.booking__header__button {
+  display: none;
+}
+@media only screen and (max-width: 37.5em) {
+  .booking__header__button {
+    display: flex;
+    margin-bottom: 91px;
+  }
 }
 .booking__header__content {
   display: flex;
@@ -1238,6 +1302,13 @@ body {
   .section__decoration {
     content: "";
     height: 500px;
+  }
+}
+@media only screen and (max-width: 43.33em) {
+  .section__decoration {
+    content: none;
+    height: 600px;
+    background-color: #fff;
   }
 }
 

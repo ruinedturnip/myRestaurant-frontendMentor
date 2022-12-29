@@ -6,9 +6,30 @@
   background-size: cover;
   color: white;
 
+  @include a.respond(phone) {
+    background-image: url(../../images/booking/hero-bg-mobile@2x.jpg);
+    height: 600px;
+  }
+
   &__logo {
     padding-top: 65px;
     margin-bottom: 153px;
+
+    @include a.respond(phone) {
+      margin: 0 auto;
+      display: flex;
+      align-self: center;
+      margin-bottom: 44px;
+    }
+  }
+
+  &__button {
+    display: none;
+
+    @include a.respond(phone) {
+      display: flex;
+      margin-bottom: 91px;
+    }
   }
 
   &__content {
@@ -51,5 +72,12 @@
   @include a.respond(tab-land) {
     content: "";
     height: 500px;
+  }
+
+  @include a.respond(tab-small) {
+    content: none;
+
+    height: 600px;
+    background-color: #fff;
   }
 }

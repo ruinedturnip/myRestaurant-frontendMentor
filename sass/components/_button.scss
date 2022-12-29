@@ -54,4 +54,8 @@
     background-color: #fff;
     border: 1px solid a.$primary-black;
   }
+
+  @include a.respond(phone) {
+    width: auto;
+  }
 }

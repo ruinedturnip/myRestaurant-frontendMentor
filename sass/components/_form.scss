@@ -19,10 +19,20 @@
     bottom: -50px;
     left: -50px;
     z-index: -10;
+
+    @include a.respond(phone) {
+      content: none;
+    }
   }
 
   @include a.respond(tab-land) {
     margin-left: 0;
+  }
+
+  @include a.respond(phone) {
+    width: 327px;
+    height: 585px;
+    padding: 3rem;
   }
 }
 
@@ -62,6 +72,13 @@
 
   &--small {
     width: 8rem;
+    @include a.respond(phone) {
+      width: 7.3rem;
+    }
+  }
+
+  @include a.respond(phone) {
+    width: 100%;
   }
 }
 
@@ -71,6 +88,12 @@
   align-items: center;
   justify-content: space-between;
   margin-bottom: 3.2rem;
+
+  @include a.respond(phone) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
 }
 
 .form__select {
@@ -90,6 +113,11 @@
   width: 28.9rem;
   display: flex;
   justify-content: space-between;
+
+  @include a.respond(phone) {
+    width: 100%;
+    gap: 15px;
+  }
 }
 
 .form__number-picker {
@@ -116,7 +144,7 @@
 
 .dropdown {
   padding-left: 1.6rem;
-  padding-bottom: 1.6rem;
+  padding-bottom: 1.4rem;
   border-bottom: 1px solid a.$primary-black;
   position: relative;
   cursor: pointer;
