@@ -186,7 +186,10 @@ body {
   font-size: 1.4rem;
   letter-spacing: 2px;
   text-transform: uppercase;
-  text-align: center;
+
+  @include a.respond(phone) {
+    text-align: center;
+  }
 }
 
 .booking__header {

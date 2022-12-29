@@ -183,7 +183,11 @@ body {
   font-size: 1.4rem;
   letter-spacing: 2px;
   text-transform: uppercase;
-  text-align: center;
+}
+@media only screen and (max-width: 37.5em) {
+  .footer {
+    text-align: center;
+  }
 }
 
 .booking__header__textbox-title {
@@ -684,7 +688,7 @@ body {
 .booking__container {
   max-width: 110rem;
   margin: 0 auto;
-  padding: 50px 0 0 0;
+  padding: 100px 0 0 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
