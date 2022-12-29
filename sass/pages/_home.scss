@@ -1,0 +1,31 @@
+@use "../abstracts/" as a;
+
+.about {
+  &__container {
+    max-width: 110rem;
+    margin: 0 auto;
+  }
+}
+
+.highlights {
+  height: 761px;
+  background-color: a.$primary-black;
+
+  &__container {
+    max-width: 110rem;
+    margin: 0 auto;
+    padding: 250px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.cards {
+  &__container {
+    max-width: 110rem;
+    margin: 0 auto;
+
+    padding: 200px 0;
+  }
+}

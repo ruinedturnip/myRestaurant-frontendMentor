@@ -1,0 +1,32 @@
+@use "../abstracts/" as a;
+
+.header {
+  height: 820px;
+  background-image: linear-gradient(
+      to right,
+      a.$primary-black 30%,
+      transparent 30%
+    ),
+    url(../../images/homepage/hero-bg-desktop.jpg);
+  background-size: cover;
+  color: white;
+
+  &__logo {
+    padding-top: 65px;
+    margin-bottom: 153px;
+  }
+
+  &__textbox {
+    display: flex;
+    flex-direction: column;
+
+    &-title {
+      margin-bottom: 10px;
+      width: 508px;
+    }
+    &-text {
+      width: 445px;
+      margin-bottom: 40px;
+    }
+  }
+}

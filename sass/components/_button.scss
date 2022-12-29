@@ -1,0 +1,53 @@
+@use "../abstracts/" as a;
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 245px;
+  height: 64px;
+  transition: all 0.3s;
+  cursor: pointer;
+
+  &--light {
+    background-color: a.$primary-black;
+    border: 1px solid #fff;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #fff;
+      color: a.$primary-black;
+    }
+  }
+
+  &--transparent {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+
+    &:hover {
+      background-color: #fff;
+      color: a.$primary-black;
+    }
+  }
+}
+
+.card__button:hover {
+  border: 1px solid a.$primary-black;
+}
+
+.form__button {
+  width: 444px;
+  height: 64px;
+  background-color: a.$primary-black;
+  transition: all 0.3s;
+  color: #fff;
+  border: none;
+
+  &:active,
+  &:hover {
+    color: a.$primary-black;
+    background-color: #fff;
+    border: 1px solid a.$primary-black;
+  }
+}

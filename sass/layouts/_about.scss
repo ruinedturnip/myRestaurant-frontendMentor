@@ -1,0 +1,75 @@
+@use "../abstracts/" as a;
+
+.about {
+  background-image: url(/images/patterns/pattern-curve-top-right.svg);
+  background-position-y: 26.2rem;
+  background-repeat: no-repeat;
+
+  &__first {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__second {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__image {
+    &--first {
+      transform: translateY(-7rem);
+      margin-right: 125px;
+    }
+    &--second {
+      transform: translateY(7rem);
+      margin-left: 125px;
+    }
+
+    &-box {
+      width: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      &--first {
+        background-image: url(../../images/homepage/enjoyable-place-desktop@2x.jpg);
+        height: 720px;
+        width: 540px;
+      }
+      &--second {
+        background-image: url(../../images/homepage/locally-sourced-desktop@2x.jpg);
+        height: 720px;
+        width: 540px;
+        position: relative;
+
+        &::after {
+          content: url(../../images/patterns/pattern-lines.svg);
+          position: absolute;
+          right: -90px;
+          top: 40%;
+        }
+      }
+    }
+  }
+
+  &__content {
+    max-width: 44.5rem;
+
+    transform: translateY(-4rem);
+    &--first {
+      svg {
+        margin-bottom: 55px;
+      }
+    }
+    &--second {
+      svg {
+        margin-bottom: 55px;
+      }
+    }
+
+    &-header {
+      margin-bottom: 27px;
+    }
+  }
+}

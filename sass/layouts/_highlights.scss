@@ -1,0 +1,60 @@
+@use "../abstracts/" as a;
+
+.highlights {
+  &__content {
+    max-width: 44.5rem;
+
+    &-header {
+      margin-bottom: 27px;
+      position: relative;
+
+      &::before {
+        content: url("/images/patterns/pattern-divide.svg");
+        position: absolute;
+        left: 0;
+        top: -100px;
+      }
+    }
+
+    &--right {
+      width: 54rem;
+      height: 38.6rem;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0 16px 0;
+    &:not(:first-child) {
+      padding: 16px 0;
+    }
+    &:not(:last-child) {
+      border-bottom: 1px solid rgba(151, 151, 151, 0.15);
+    }
+
+    &-img {
+      position: relative;
+      &::after {
+        content: " ";
+        width: 3.2rem;
+        height: 1px;
+        background-color: a.$primary-brown;
+        position: absolute;
+        right: -32px;
+        top: 1.6rem;
+      }
+    }
+
+    &-textbox {
+      max-width: 350px;
+    }
+
+    &--heading {
+      margin-bottom: 6px;
+    }
+  }
+}

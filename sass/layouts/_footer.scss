@@ -1,0 +1,24 @@
+@use "../abstracts/" as a;
+
+.footer {
+  height: 24rem;
+  background-color: a.$primary-black;
+
+  &__container {
+    max-width: 110rem;
+    display: flex;
+    align-items: flex-start;
+    padding: 7rem 0 0 16.5rem;
+  }
+
+  &--middle {
+    display: flex;
+    flex-direction: column;
+    margin-right: 124px;
+    margin-left: 193px;
+  }
+}
+
+.logo__link {
+  cursor: pointer;
+}

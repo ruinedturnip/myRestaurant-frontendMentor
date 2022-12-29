@@ -1,0 +1,63 @@
+@use "../abstracts/" as a;
+
+.card {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  &__picture {
+    transition: all 1s;
+  }
+
+  &::after {
+    content: url("/images/patterns/pattern-lines.svg");
+    position: absolute;
+    top: -30px;
+    left: -30px;
+  }
+
+  &--right {
+    margin-left: 115px;
+  }
+
+  &--textbox {
+    max-width: 44.5rem;
+    margin-bottom: 60px;
+  }
+
+  &__heading {
+    margin-bottom: 19px;
+  }
+
+  &__list {
+    margin-top: 79px;
+    list-style: none;
+
+    &-item:not(:last-child) {
+      margin-bottom: 12px;
+    }
+
+    &-item {
+      cursor: pointer;
+      position: relative;
+
+      &-line {
+        display: none;
+      }
+
+      &.active &-line {
+        display: block;
+        width: 95px;
+        height: 1px;
+        background-color: a.$primary-brown;
+        position: absolute;
+        top: 50%;
+        transform: translate(-12.5rem, -0.2rem);
+      }
+    }
+  }
+}
+
+.hide {
+  display: none;
+}

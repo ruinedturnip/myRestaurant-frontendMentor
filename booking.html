@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+
+    <title>Frontend Mentor | Dine Website Challenge</title>
+  </head>
+  <body>
+      <header class="booking__header container">
+        <a href="index.html"> <img src="./images/logo.svg" alt="logo" class="header__logo" /></a> 
+        <div class="booking__header__content">
+          <div class="booking__header__textbox">
+            <h1 class="booking__header__textbox-title">Reservations</h2>
+              <p class="booking__header__textbox-text">We can’t wait to host you. If you have any special requirements please feel free to call on the phone number below. We’ll be happy to accommodate you.
+              </p>
+          </div>
+          <form action="" method="get" class="booking__form" id="reservation">
+          <div class="form__text">
+            <label for="name" class="form__label screen__reader">Name</label>
+            <input type="text" name="name" id="name" class="input-box input-box--large" placeholder="Name">
+          </div>
+          <div class="form__text">
+            <label for="email" class="form__label screen__reader">Email</label>
+            <input type="text" name="email" id="email" class="input-box input-box--large" placeholder="Email">
+          </div>
+          <div class="form__date">
+            <p class="form__label">Pick a date</p>
+            <div class="form__input__containers">
+              <div class="form__input-container">
+                <label for="month" class="form__label screen__reader">Month</label>
+                <input class="input-box input-box--small" type="text" name="month" id="month" placeholder="MM" maxlength="2">
+              </div>
+              <div class="form__input-container">
+                <label for="day" class="form__label screen__reader">Day</label>
+                <input class="input-box input-box--small" type="text" name="day" id="day" placeholder="DD" maxlength="2">
+              </div>
+              <div class="form__input-container">
+                <label for="year" class="form__label screen__reader">Year</label>
+                <input class="input-box input-box--small" type="text" name="year" id="year" placeholder="YYYY" maxlength="4">
+              </div>
+              
+            </div>
+          </div>
+          <div class="form__month">
+            <p class="form__label">Pick a time</p>
+            <div class="form__input__containers">
+              <div class="form__input-container">
+                <label for="hour" class="form__label screen__reader">Hour</label>
+                <input class="input-box input-box--small" type="text" name="hour" id="hour" placeholder="09" maxlength="2">
+              </div>
+              <div class="form__input-container">
+                <label for="minute" class="form__label screen__reader">Minute</label>
+                <input class="input-box input-box--small" type="text" name="minute" id="minute" placeholder="00" maxlength="2">
+              </div>
+              <div class="dropdown-container">
+                <div class="dropdown dropdown--meridiem" id="dropdown-trigger">
+                  <div id="selected-meridiem" class="dropdown__selected">AM</div>
+                  <div class="dropdown__arrow" id="dropdown-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="11"><path fill="none" stroke="#9E7F66" stroke-width="2" d="M1 1l8 8 8-8"></path></svg></div>
+                  <div class="dropdown__items" id="dropdown-menu">
+                    <div class="dropdown__item">
+                      <svg class="dropdown__item__checkmark checked" xmlns="http://www.w3.org/2000/svg" width="13" height="11"><path fill="none" stroke="#9E7F66" stroke-width="2" d="M1 5.897l2.767 2.767L11.432 1"></path></svg>
+                      <p class="t-form t-form--regular">AM</p>
+                    </div>
+                    <div class="dropdown__item">
+                      <svg class="dropdown__item__checkmark" xmlns="http://www.w3.org/2000/svg" width="13" height="11"><path fill="none" stroke="#9E7F66" stroke-width="2" d="M1 5.897l2.767 2.767L11.432 1"></path></svg>
+                      <p class="t-form t-form--regular">PM</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </div>
+            </div>
+            <div class="form__number-picker">
+              <button class="form__number-picker__button" id="minus" type='button'>
+                <span class="screen__reader">minus</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="7" height="3"><path fill="#9E7F66" d="M6.425 2.977V.601H.629v2.376z"></path></svg>
+              </button>
+              <p class="form__text__number"><span id="number-of-people">4</span> people</p>
+              <button class="form__number-picker__button" id="plus" type='button'>
+                <span class="screen__reader">plus</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="11"><path fill="#9E7F66" d="M6.227 10.156V6.727h3.429V4.342H6.227V.913H3.842v3.429H.413v2.385h3.429v3.429z"></path></svg>
+              </button>
+            </div>
+            <button class="button form__button"   id="submitBtn">Submit</button>
+          </form>
+        </div>
+      </header>
+      <section class="section__decoration">
+        <img src="/images/patterns/pattern-curve-bottom-right.svg" alt="decoration" height="">
+      </section>
+            
+            
+      <footer class="section__footer footer booking__footer">
+        <div class="footer__container">
+          <a href="index.html" class="logo__link"><img src="./images/logo.svg" alt="logo" class="footer__logo" /></a>         <div class="footer--middle">
+            <p class="footer--text">Marthwaite, Sedbergh </p>
+            <p class="footer--text">Cumbria</p>
+            <p class="footer--text">+00 44 123</p>
+          </div>
+          <div class="footer--right">
+            <p class="footer--text">Open times</p>
+            <p class="footer--text">Mon - Fri: 09:00 AM - 10:00 PM</p>
+            <p class="footer--text">Sat - Sun: 09:00 AM - 11:30 PM</p>
+          </div>
+        </div>
+      </footer>
+    <script src="bookingscript.js"></script>
+  </body>
+</html>

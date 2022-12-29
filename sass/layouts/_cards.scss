@@ -1,0 +1,8 @@
+@use "../abstracts/" as a;
+
+.cards {
+  background-image: url(/images/patterns/pattern-curve-top-right.svg);
+  background-position-y: 0rem;
+  background-position-x: -30rem;
+  background-repeat: no-repeat;
+}

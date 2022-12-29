@@ -1,0 +1,36 @@
+@use "../abstracts/" as a;
+
+.booking__header {
+  height: 600px;
+  background-image: url(../../images/booking/hero-bg-desktop@2x.jpg);
+  background-size: cover;
+  color: white;
+
+  &__logo {
+    padding-top: 65px;
+    margin-bottom: 153px;
+  }
+
+  &__content {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &__textbox {
+    display: flex;
+    flex-direction: column;
+
+    &-title {
+      margin-bottom: 2rem;
+      max-width: 508px;
+    }
+    &-text {
+      max-width: 445px;
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.section__decoration {
+  height: 320px;
+}

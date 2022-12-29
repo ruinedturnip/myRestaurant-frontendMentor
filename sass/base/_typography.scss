@@ -1,0 +1,188 @@
+@use "../abstracts" as a;
+
+body {
+  font-family: "League Spartan", sans-serif;
+  font-weight: 400;
+  /* font-size: 16px; */
+  line-height: 30px;
+  color: a.$secondary-medium-blue;
+}
+
+.header {
+  &__textbox {
+    &-title {
+      font-size: 8rem;
+      font-weight: 300;
+
+      line-height: 80px;
+    }
+
+    &-text {
+      font-weight: 400;
+      font-size: 2rem;
+    }
+  }
+}
+
+.button {
+  font-size: 1.7rem;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  &--light {
+    color: white;
+  }
+}
+
+.about {
+  &__content {
+    &-header {
+      font-size: 4.8rem;
+      line-height: 48px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+    &-text {
+      font-size: 2rem;
+      line-height: 3rem;
+    }
+  }
+}
+
+.highlights {
+  color: #fff;
+  &__content {
+    &-header {
+      font-size: 4.8rem;
+      line-height: 48px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+    }
+    &-text {
+      font-size: 2rem;
+      line-height: 3rem;
+    }
+  }
+
+  &__item {
+    &--heading {
+      font-size: 2rem;
+      line-height: 24px;
+      letter-spacing: -0.5px;
+    }
+
+    &--text {
+      font-size: 1.8rem;
+      line-height: 26px;
+    }
+  }
+}
+
+.card {
+  &__heading {
+    font-size: 4.8rem;
+    letter-spacing: -0.5px;
+    font-weight: 700px;
+  }
+
+  &__text {
+    font-size: 2rem;
+    line-height: 30px;
+  }
+
+  &__listtext {
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-size: 1.7rem;
+    font-weight: 600;
+
+    opacity: 50%;
+
+    &:hover {
+      opacity: 100%;
+    }
+  }
+}
+
+.card__list-item.active p {
+  opacity: 100%;
+}
+
+.booking {
+  &__heading {
+    font-size: 4.8rem;
+    font-weight: 700;
+    color: #fff;
+  }
+}
+
+.footer {
+  color: #fff;
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.booking__header {
+  &__textbox {
+    &-title {
+      font-size: 8rem;
+      font-weight: 300;
+      letter-spacing: -1px;
+    }
+    &-text {
+      font-size: 2rem;
+      line-height: 3rem;
+      font-weight: 400;
+    }
+  }
+}
+
+// FORM Content
+.input-box {
+  font-weight: 300;
+  font-family: inherit;
+  opacity: 0.5;
+  font-size: 1.8rem;
+  line-height: 1.556;
+  letter-spacing: -0.22px;
+  color: a.$primary-black;
+}
+
+.form__label {
+  font-size: 1.8rem;
+  line-height: 1.556;
+  letter-spacing: -0.22px;
+  font-weight: 300;
+  color: a.$primary-black;
+}
+
+.form__select {
+  opacity: 0.5;
+}
+
+.form__text__number {
+  font-weight: 700;
+  font-size: 2rem;
+  color: a.$primary-black;
+}
+
+.dropdown__selected {
+  font-weight: 300;
+  font-size: 1.8rem;
+  line-height: 1.556;
+  letter-spacing: -0.22px;
+  color: a.$primary-black;
+}
+
+.t-form {
+  font-size: 1.8rem;
+  line-height: 1.556;
+  letter-spacing: -0.22px;
+  color: a.$primary-black;
+}
+
+.t-form--regular {
+  font-weight: 300;
+}
